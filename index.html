@@ -45,28 +45,27 @@
         }
 
         /* Header Styles */
-        header {
-            height: 100vh;
-            width: 100%;
+      header {
             position: relative;
-            overflow: hidden;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 20px;
+            background-color: var(--header-bg);
+            overflow: hidden;
         }
 
-        .header-bg {
+        .header-bg-animation {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, var(--dark) 50%, var(--secondary) 100%);
-            z-index: -2;
-            overflow: hidden;
+            z-index: -1;
+            opacity: 0.7;
         }
 
         .header-bg::before {
@@ -76,7 +75,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/></svg>');
+            background: url('MR.jpg') no-repeat center center/cover;
             background-size: 50px 50px;
             opacity: 0.3;
             animation: gridMove 20s linear infinite;
@@ -86,10 +85,10 @@
             0% { background-position: 0 0; }
             100% { background-position: 50px 50px; }
         }
-
+        
         .logo {
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
             margin-bottom: 20px;
             border-radius: 50%;
             background-color: var(--light);
@@ -897,9 +896,6 @@
             </div>
             <h3>Welcome to SINHA AI</h3>
             <h3>Try The Latest Features Powered by Artificial Intelligence</h3>
-            <h3>We are very happy to announce that we have now released a large number of new tools powered by the only open source artificial intelligence technology created in Sri Lanka for you.
-
-                Because the models are completely open source, we give you not only the source code, but also unlimited questions, answers, searching for foreign information, 100% download the source code, and guide you to create your own models, so go ahead...</h3>
             <button class="btn">Register Now</button>
         </div>
     </div>
@@ -1225,7 +1221,7 @@
                     <h3>Free AI Education</h3>
                     <p>Start your AI journey with our free courses designed for beginners and experienced developers alike. Learn about machine learning, neural networks, and how to implement AI solutions in real-world scenarios.</p>
                     <p>Our courses include hands-on projects, video tutorials, and community support to help you master AI concepts.</p>
-                    <a href="https://sites.google.com/view/jgssoftware/education" target="_blank" class="btn">GET COURSES</a>
+                    <button class="btn" url="https://sites.google.com/view/jgssoftware/education">GET COURSES</button>
                 </div>
             </div>
         </div>
